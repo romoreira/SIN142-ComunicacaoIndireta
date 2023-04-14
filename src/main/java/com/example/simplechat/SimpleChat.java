@@ -6,6 +6,7 @@ import org.jgroups.util.Util;
 import java.io.*;
 import java.util.List;
 import java.util.LinkedList;
+import java.util.Optional;
 
 public class SimpleChat extends ReceiverAdapter {
     private View lastView;
@@ -66,11 +67,17 @@ public class SimpleChat extends ReceiverAdapter {
     private void start() throws Exception {
         channel=new JChannel();
         channel.setReceiver(this);
-        channel.connect("ChatCluster");
+        channel = new JChannel("src/main/java/udp.xml");
         channel.name("rodrigo");
-        channel.getState(null, 10000);
+        channel.connect("ChatCluster");
+        channel.getState(null, 0);
         eventLoop();
         channel.close();
+    }
+
+    private Optional<Address> getAddress(String name) {
+        View view = channel.view();
+        return view.getMembers().stream().filter(address -> name.equals(address.toString())).findFirst();
     }
 
     private void eventLoop() {
