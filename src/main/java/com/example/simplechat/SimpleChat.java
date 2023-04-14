@@ -67,13 +67,12 @@ public class SimpleChat extends ReceiverAdapter {
     private void start() throws Exception {
         channel=new JChannel();
         channel.setReceiver(this);
-        channel = new JChannel("src/main/java/udp.xml");
-        channel.name("rodrigo");
         channel.connect("ChatCluster");
-        channel.getState(null, 0);
         eventLoop();
         channel.close();
     }
+
+
 
     private Optional<Address> getAddress(String name) {
         View view = channel.view();
