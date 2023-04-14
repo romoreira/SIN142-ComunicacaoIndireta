@@ -67,6 +67,7 @@ public class SimpleChat extends ReceiverAdapter {
         channel=new JChannel();
         channel.setReceiver(this);
         channel.connect("ChatCluster");
+        channel.name("rodrigo");
         channel.getState(null, 10000);
         eventLoop();
         channel.close();
