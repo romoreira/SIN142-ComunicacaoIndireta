@@ -8,13 +8,13 @@ import java.util.List;
 import java.util.LinkedList;
 
 public class SimpleChat extends ReceiverAdapter {
+    private View lastView;
+
     JChannel channel;
     String user_name=System.getProperty("user.name", "n/a");
     final List<String> state=new LinkedList<String>();
 
-    public void viewAccepted(View new_view) {
-        System.out.println("** view: " + new_view);
-    }
+
 
     public void receive(Message msg) {
         String line=msg.getSrc() + ": " + msg.getObject();
@@ -42,7 +42,26 @@ public class SimpleChat extends ReceiverAdapter {
             System.out.println(str);
         }
     }
+    public void viewAccepted(View newView) {
 
+        // Save view if this is the first
+        if (lastView == null) {
+            System.out.println("Received initial view:");
+            newView.forEach(System.out::println);
+        } else {
+            // Compare to last view
+            System.out.println("Received new view.");
+
+            List<Address> newMembers = View.newMembers(lastView, newView);
+            System.out.println("New members: ");
+            newMembers.forEach(System.out::println);
+
+            List<Address> exMembers = View.leftMembers(lastView, newView);
+            System.out.println("Exited members:");
+            exMembers.forEach(System.out::println);
+        }
+        lastView = newView;
+    }
 
     private void start() throws Exception {
         channel=new JChannel();
