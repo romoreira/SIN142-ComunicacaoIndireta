@@ -1,4 +1,5 @@
 # SIN142 Comunicacao Indireta
+## Comunicação em Grupo
 Objetivos: nesta aula abordaremos a comunicação em grupo  (Multicast) utilizando o JGroup.
 
 ## Passos:
