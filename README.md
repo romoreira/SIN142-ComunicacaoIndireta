@@ -19,6 +19,15 @@ Requisitos: Sistema Operacional Linux, IntelliJ IDE e Biblioteca JGroups :bulb:
 5. Rodar o Script (SimpleChar.java)
 - Clicar com botão direito sobre o arquivo 'SimpleChat.java' e em seguida 'Run'
 
+
+## Pergunta-se: :interrobang:
+
+1. Como você pode criar um cluster JGroups?
+2. Como você pode configurar JGroups para um caso de uso específico?
+3. Como você pode monitorar a saúde e performance de um cluster JGroups?
+4. Como você pode integrar o JGroups com outras tecnologias, como Spring Framework ou Apache Camel?
+
+
 ## Proposição: :pencil:
 
 Exercício: Implemente um aplicativo de bate-papo em grupo usando JGroups.
@@ -33,9 +42,4 @@ Neste exercício, você implementará um aplicativo simples de bate-papo em grup
 
 - Teste o aplicativo: teste o aplicativo executando várias instâncias da sala de bate-papo em diferentes máquinas e associando-as ao mesmo cluster. Verifique se as mensagens estão sendo enviadas e recebidas corretamente e se os usuários podem entrar e sair da sala de bate-papo sem problemas.
 
-## Pergunta-se: :interrobang:
 
-1. Como você pode criar um cluster JGroups?
-2. Como você pode configurar JGroups para um caso de uso específico?
-3. Como você pode monitorar a saúde e performance de um cluster JGroups?
-4. Como você pode integrar o JGroups com outras tecnologias, como Spring Framework ou Apache Camel?
