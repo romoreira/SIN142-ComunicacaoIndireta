@@ -1,6 +1,7 @@
 # SIN142 Comunicacao Indireta
 ## Comunicação em Grupo :desktop_computer:
-Objetivos: nesta aula abordaremos a comunicação em grupo (Multicast) utilizando o JGroups.
+Objetivos: nesta aula abordaremos a comunicação em grupo (Multicast) utilizando o JGroups. :chart:
+Requisitos: Sistema Operacional Linux, IntelliJ IDE :bulb:
 
 ## Passos:
 
