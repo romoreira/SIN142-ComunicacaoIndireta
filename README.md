@@ -5,6 +5,7 @@ Requisitos: Sistema Operacional Linux, IntelliJ IDE e Biblioteca JGroups :bulb:
 
 ## Passos:
 
+0. Baixar o IntellJ IDE: https://www.jetbrains.com/idea/download/#section=linux
 1. Clonar o repositório da aula no PC (de preferência na pasta do usuário)
 `git clone https://github.com/romoreira/SIN142-ComunicacaoIndireta-Multicast.git`
 2. Extrair e Rodar o IntelliJ IDE (community ou professional)
